@@ -45,6 +45,7 @@
 </script>
 
 <?php
+$msj = $_GET['msj'] ?? '';
 if (isset($_GET)) {
     extract($_GET);
     switch ($msj) {

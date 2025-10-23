@@ -389,7 +389,7 @@
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="/img/news/1.jpg?=2" alt="">
+                        <div class="position-re o-hidden"> <img src="img/news/1.jpg?=2" alt="">
                         </div>
                         <div class="con"> <span class="category">
                                 <a href="#">Cumpleaños</a>
@@ -400,7 +400,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="/img/news/2.jpg?=2" alt="">
+                        <div class="position-re o-hidden"> <img src="img/news/2.jpg?=2" alt="">
                         </div>
                         <div class="con"> <span class="category">
                                 <a href="#">Aniversarios</a>
@@ -411,7 +411,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="/img/news/7.jpg?=3" alt="">
+                        <div class="position-re o-hidden"> <img src="img/news/7.jpg?=3" alt="">
                         </div>
                         <div class="con"> <span class="category">
                                 <a href="#">Días Especiales</a>
