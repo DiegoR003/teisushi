@@ -1,25 +1,42 @@
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+# -----------------------------
+# WAMP / LOCAL
+# -----------------------------
+# No forzar HTTPS ni handlers de cPanel
+# Asegúrate de tener rewrite_module activo
 
-Options +FollowSymLinks
-RewriteEngine on
-# RewriteRule ^/index([0-9]+)$ index.php?id=$1
-# RewriteRule ^contacto/([0-9]+)$ contacto.php/modules/contacto.php
-# RewriteRule ^propiedades/([0-9]+)$ propiedades.php/modules/propiedades.php
-# RewriteRule ^galeria/([0-9]+)$ galeria.php/modules/galeria.php
+# Recomendado: evitar conflictos con MultiViews
+Options -MultiViews +FollowSymLinks
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/$ $1.php
-RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
-RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3.php
+RewriteEngine On
+RewriteBase /teisushi/
+
+# No reescribir archivos ni carpetas reales
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# EXCLUSIONES explícitas para assets estáticos (opcional pero útil)
+RewriteRule ^(assets/|css/|js/|img/|images/|fonts/|uploads/|media/) - [L]
+
+# URL amigables tipo:
+# /pagina/           -> pagina.php
+# /seccion/item/     -> seccion/item.php
+# /a/b/c/            -> a/b/c.php
+
+RewriteRule ^([^/]+)/$                 $1.php        [L,QSA]
+RewriteRule ^([^/]+)/([^/]+)/$         $1/$2.php     [L,QSA]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3.php  [L,QSA]
+
+# (Opcional) Añadir la diagonal final si NO es archivo/dir/ni trae extensión
+# Evita loops con las reglas anteriores
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
-RewriteRule (.*)$ /$1/ [R=301,L]
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,5}$
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule . %{REQUEST_URI}/ [R=301,L]
 
-# php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php81” package as the default “PHP” programming language.
-<IfModule mime_module>
-  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
-</IfModule>
-# php -- END cPanel-generated handler, do not edit
+# Página por defecto
+DirectoryIndex index.php index.html
+
+# Charset recomendado
+AddDefaultCharset UTF-8
