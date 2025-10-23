@@ -1,0 +1,25 @@
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+Options +FollowSymLinks
+RewriteEngine on
+# RewriteRule ^/index([0-9]+)$ index.php?id=$1
+# RewriteRule ^contacto/([0-9]+)$ contacto.php/modules/contacto.php
+# RewriteRule ^propiedades/([0-9]+)$ propiedades.php/modules/propiedades.php
+# RewriteRule ^galeria/([0-9]+)$ galeria.php/modules/galeria.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.php
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
