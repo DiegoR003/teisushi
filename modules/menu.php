@@ -1,5 +1,5 @@
 <!-- Header Banner -->
-<div class="banner-header valign bg-img bg-fixed" data-overlay-dark="6" data-background="/img/banner8.jpg">
+<div class="banner-header valign bg-img bg-fixed" data-overlay-dark="6" data-background="img/banner8.jpg">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center caption mt-60">
@@ -30,39 +30,39 @@
             <div class="col-12">
                 <div class="position-re">
                     <div class="tab-content current text-center" id="tab-1">
-                        <img src="/img/menu/01.jpg?=1" style="width: 80%;" alt="">
+                        <img src="img/menu/01.jpg?=1" style="width: 80%;" alt="">
                     </div>
                     <div class="tab-content text-center" id="tab-2">
-                        <img src="/img/menu/02.jpg?=2" style="width: 80%;" alt="">
+                        <img src="img/menu/02.jpg?=2" style="width: 80%;" alt="">
                     </div>
                     <div class="tab-content text-center" id="tab-3">
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="/img/menu/05.jpg" style="width: 80%;" alt="">
+                                <img src="img/menu/05.jpg" style="width: 80%;" alt="">
                             </div>
                             <div class="col-md-6">
-                                <img src="/img/menu/06.jpg" style="width: 80%;" alt="">
+                                <img src="img/menu/06.jpg" style="width: 80%;" alt="">
                             </div>
                             <div class="col-md-6">
-                                <img src="/img/menu/07.jpg" style="width: 80%;" alt="">
+                                <img src="img/menu/07.jpg" style="width: 80%;" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="tab-content text-center" id="tab-4">
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="/img/menu/03.jpg" style="width: 80%;" alt="">
+                                <img src="img/menu/03.jpg" style="width: 80%;" alt="">
                             </div>
                             <div class="col-md-6">
-                                <img src="/img/menu/04.jpg" style="width: 80%;" alt="">
+                                <img src="img/menu/04.jpg" style="width: 80%;" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="tab-content text-center" id="tab-55">
-                        <img src="/img/menu/09.jpg" style="width: 80%;" alt="">
+                        <img src="img/menu/09.jpg" style="width: 80%;" alt="">
                     </div>
                     <div class="tab-content text-center" id="tab-5">
-                        <img src="/img/menu/08.jpg" style="width: 80%;" alt="">
+                        <img src="img/menu/08.jpg" style="width: 80%;" alt="">
                     </div>
                 </div>
             </div>

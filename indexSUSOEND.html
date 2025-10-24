@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-6 col-md-4 col-lg-3">
-                <img class="responsive" src="/logo-bl.png" alt="">
+                <img class="responsive" src="logo-bl.png" alt="">
             </div>
         </div>
         <div class="row justify-content-center">

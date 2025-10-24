@@ -16,7 +16,7 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # EXCLUSIONES explícitas para assets estáticos (opcional pero útil)
-RewriteRule ^(assets/|css/|js/|img/|images/|fonts/|uploads/|media/) - [L]
+RewriteRule ^(assets/|css/|js/|img/|images/|fonts/|uploads/|media/|docs/) - [L]
 
 # URL amigables tipo:
 # /pagina/           -> pagina.php

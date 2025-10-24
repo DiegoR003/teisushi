@@ -70,4 +70,19 @@
              </div>
          </div>
      </div>
+
+     <script>
+(function(){
+  // Si el preloader no se quita solo, este script lo remueve a los 2 segundos
+  function hidePreloader(){
+    document.getElementById('preloader')?.remove();
+    document.querySelector('.preloader-bg')?.remove();
+    document.documentElement.classList.remove('overflow-hidden');
+    document.body.classList.remove('overflow-hidden');
+  }
+  window.addEventListener('load', hidePreloader);
+  setTimeout(hidePreloader, 2000);
+})();
+</script>
+
  </footer>

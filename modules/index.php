@@ -49,8 +49,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-md-3"> <img src="/img/01.jpg?=2" alt="" class="mt-90 mb-30"> </div>
-            <div class="col col-md-3"> <img src="/img/02.jpg?=2" alt=""> </div>
+            <div class="col col-md-3"> <img src="img/01.jpg?=2" alt="" class="mt-90 mb-30"> </div>
+            <div class="col col-md-3"> <img src="img/02.jpg?=2" alt=""> </div>
         </div>
     </div>
 </section>
@@ -59,7 +59,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 offset-md-1 mb-30">
-                <img src="/img/chef/chef.jpg?=3" alt="">
+                <img src="img/chef/chef.jpg?=3" alt="">
             </div>
             <div class="col-md-5 valign mb-30">
                 <div class="row">
@@ -80,7 +80,7 @@
                             <a target="_blank" href="https://www.opentable.com.mx/r/tei-sushi-san-jose-del-cabo?corrid=bf20a876-aa77-4635-a023-85f4c04ac5ae&avt=eyJ2IjoyLCJtIjowLCJwIjowLCJzIjowLCJuIjowfQ&p=2&sd=2023-03-29T19%3A00%3A00" class="button-1 mt-15">Reservar</a>
                         </div>
                         <div hidden class="about-bottom">
-                            <img src="/img/signature.svg" alt="" class="image about-signature">
+                            <img src="img/signature.svg" alt="" class="image about-signature">
                             <div class="about-name-wrapper">
                                 <div class="about-name">Harold Brown</div>
                                 <div class="about-rol">Master Chef</div>
@@ -109,9 +109,9 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="item">
-                    <div class="position-re o-hidden"> <img src="/img/chef/hamburger.jpg?=1" alt=""> </div>
+                    <div class="position-re o-hidden"> <img src="img/chef/hamburger.jpg?=1" alt=""> </div>
                     <div class="con">
-                        <img src="/img/jazmin.png?=1" style="width: 130px;" alt="">
+                        <img src="img/jazmin.png?=1" style="width: 130px;" alt="">
                         <!-- <div class="icon flaticon-hamburger-1"></div> -->
                         <!-- <h6>Food</h6> -->
                         <h5>Cocina Mexicana</h5>
@@ -127,10 +127,10 @@
             </div>
             <div class="col-md-4">
                 <div class="item">
-                    <div class="position-re o-hidden"> <img src="/img/chef/salad.jpg?=2" alt=""> </div>
+                    <div class="position-re o-hidden"> <img src="img/chef/salad.jpg?=2" alt=""> </div>
                     <!-- <span class="category"><a href="#0">$12.00</a></span> -->
                     <div class="con">
-                        <img src="/img/alcari.png?=1" style="width: 100px; margin-bottom: 1rem;" alt="">
+                        <img src="img/alcari.png?=1" style="width: 100px; margin-bottom: 1rem;" alt="">
                         <!-- <div class="icon flaticon-salad"></div> -->
                         <!-- <h6>Salad</h6> -->
                         <h5>Tei Sushi</h5>
@@ -145,9 +145,9 @@
             </div>
             <div class="col-md-4">
                 <div class="item">
-                    <div class="position-re o-hidden"> <img src="/img/chef/wine.jpg?=1" alt=""> </div>
+                    <div class="position-re o-hidden"> <img src="img/chef/wine.jpg?=1" alt=""> </div>
                     <div class="con">
-                        <img src="/img/fiorenza.png?=1" style="width: 70px; margin-bottom: 1rem;" alt="">
+                        <img src="img/fiorenza.png?=1" style="width: 70px; margin-bottom: 1rem;" alt="">
                         <!-- <div class="icon flaticon-whisky"></div> -->
                         <!-- <h6>Wine</h6> -->
                         <h5>Cocina Italiana</h5>
@@ -164,7 +164,7 @@
     </div>
 </section>
 <!-- Testimonials - Opening hours -->
-<section class="background bg-img bg-fixed section-padding pb-0" data-background="/img/banner6.jpg?=3" data-overlay-dark="6">
+<section class="background bg-img bg-fixed section-padding pb-0" data-background="img/banner6.jpg?=3" data-overlay-dark="6">
     <div class="container">
         <div class="row">
             <!-- Testimonials -->
@@ -188,7 +188,7 @@
                                     El lugar es bonito, tiene aire acondicionado, sillas cómodas. Buena atención.
                                 </p>
                                 <div class="info">
-                                    <!-- <div class="author-img"> <img src="/img/team/4.jpg" alt=""> </div> -->
+                                    <!-- <div class="author-img"> <img src="img/team/4.jpg" alt=""> </div> -->
                                     <div class="cont">
                                         <h6 style="color: #fff;">Octava</h6>
                                     </div>
@@ -206,7 +206,7 @@
                                     lugar completo para asistir con pareja o en familia.
                                 </p>
                                 <div class="info">
-                                    <!-- <div class="author-img"> <img src="/img/team/1.jpg" alt=""> </div> -->
+                                    <!-- <div class="author-img"> <img src="img/team/1.jpg" alt=""> </div> -->
                                     <div class="cont">
                                         <h6 style="color: #fff;">Oscar Rodriguez Alvarez</h6>
                                     </div>
@@ -222,7 +222,7 @@
                                 <p>Buen lugar para locales, precios accesibles y comida muy rica. El ambiente muy bueno,
                                     agradable</p>
                                 <div class="info">
-                                    <!-- <div class="author-img"> <img src="/img/team/5.jpg" alt=""> </div> -->
+                                    <!-- <div class="author-img"> <img src="img/team/5.jpg" alt=""> </div> -->
                                     <div class="cont">
                                         <h6 style="color: #fff;">Abraham Romero</h6>
                                     </div>
@@ -302,7 +302,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="item"> <img style="width: 3rem; height: 3rem;" src="/img/wine.png" alt="">
+                <div class="item"> <img style="width: 3rem; height: 3rem;" src="img/wine.png" alt="">
                     <div class="cont">
                         <h5>Bebidas </h5>
                         <p>
@@ -318,7 +318,7 @@
 
 
 <!-- Restaurant Video -->
-<section class="section-padding video-wrapper video bg-img bg-fixed" data-overlay-dark="4" data-background="/img/banner14.jpg?=2">
+<section class="section-padding video-wrapper video bg-img bg-fixed" data-overlay-dark="4" data-background="img/banner14.jpg?=2">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -362,14 +362,14 @@
     </div>
     <div class="owl-carousel owl-theme">
         <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-        <div class="text-left item bg-img" data-overlay-dark="5" data-background="/img/daily/1.jpg?=2"></div>
-        <div class="text-left item bg-img" data-overlay-dark="5" data-background="/img/daily/2.jpg?=2"></div>
-        <div class="text-left item bg-img" data-overlay-dark="4" data-background="/img/daily/3.jpg?=2"></div>
-        <div class="text-left item bg-img" data-overlay-dark="5" data-background="/img/daily/4.jpg?=2"></div>
-        <div class="text-left item bg-img" data-overlay-dark="5" data-background="/img/daily/5.jpg?=2"></div>
-        <div class="text-left item bg-img" data-overlay-dark="5" data-background="/img/daily/6.jpg?=2"></div>
-        <div class="text-left item bg-img" data-overlay-dark="5" data-background="/img/daily/7.jpg?=2"></div>
-        <div class="text-left item bg-img" data-overlay-dark="5" data-background="/img/daily/8.jpg?=3"></div>
+        <div class="text-left item bg-img" data-overlay-dark="5" data-background="img/daily/1.jpg?=2"></div>
+        <div class="text-left item bg-img" data-overlay-dark="5" data-background="img/daily/2.jpg?=2"></div>
+        <div class="text-left item bg-img" data-overlay-dark="4" data-background="img/daily/3.jpg?=2"></div>
+        <div class="text-left item bg-img" data-overlay-dark="5" data-background="img/daily/4.jpg?=2"></div>
+        <div class="text-left item bg-img" data-overlay-dark="5" data-background="img/daily/5.jpg?=2"></div>
+        <div class="text-left item bg-img" data-overlay-dark="5" data-background="img/daily/6.jpg?=2"></div>
+        <div class="text-left item bg-img" data-overlay-dark="5" data-background="img/daily/7.jpg?=2"></div>
+        <div class="text-left item bg-img" data-overlay-dark="5" data-background="img/daily/8.jpg?=3"></div>
 
     </div>
 </section>
@@ -428,7 +428,7 @@
 </section>
 <!-- Booking Form -->
 <section class="testimonials" id="contacto">
-    <div class="background bg-img bg-fixed section-padding pb-0" data-background="/img/banner2.jpg" data-overlay-dark="7">
+    <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/banner2.jpg" data-overlay-dark="7">
         <div class="container">
             <div class="row">
                 <!-- Reservation -->

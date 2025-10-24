@@ -10,7 +10,7 @@
     <div class="container">
         <!-- Logo -->
         <div class="logo-wrapper">
-            <a class="logo" > <img style="width: 6rem;" src="img/logo2.png?=2" class="logo-img" alt=""> </a>
+            <a class="logo" href="/teisushi/"> <img style="width: 6rem;" src="img/logo2.png?=2" class="logo-img" alt=""> </a>
         </div>
         <!-- Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
@@ -29,6 +29,16 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+     data-bs-auto-close="outside" aria-expanded="false">
+     Catering <i class="ti-angle-down"></i>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="CateringEsp.php" class="dropdown-item"><span>Catering Español</span></a></li>
+    <li><a href="CateringEng.php" class="dropdown-item"><span>Catering English</span></a></li>
+  </ul>
+</li>
                 <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
         </div>
