@@ -227,6 +227,15 @@
           <li>• Presentación elegante y servicio atento a cargo de personal capacitado.</li>
           <li>• Menús personalizados para adaptarse a tu celebración.</li>
         </ul>
+
+        <p class="mt-3 animate-on-scroll" data-anim="fadeInUp" data-delay="100">
+           <p class="mb-0">Servicios opcionales adicionales:</p>
+          
+           <li>• Bebidas sin alcohol.</li>
+          <li>• Sake.</li>
+          <li>• Chef preparando sushi en vivo.</li>
+        </p>
+
       </div>
     </div>
   </div>
@@ -237,8 +246,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-4">
-        <div class="section-subtitle text-uppercase tracking-wide">Servicios opcionales adicionales</div>
-        <h2 class="section-title display-5">Da vida a tus momentos memorables.</h2>
+        <div class="section-subtitle text-uppercase tracking-wide">MENÚS DE CATERING EN LOS CABOS</div>
+        <h2 class="section-title display-5"> Descubre tres menús únicos que combinan la autenticidad japonesa con el espíritu de Baja.</h2>
       </div>
     </div>
 
@@ -249,12 +258,14 @@
           <!-- Item 1 -->
           <div class="item">
             <div class="position-re o-hidden">
-              <img src="img/about.jpg?=2" class="w-100 d-block" alt="Días especiales">
+              <img src="img/MENU-1.jpg" class="w-100 d-block" alt="Días especiales">
             </div>
             <div class="moments-card">
-              <span class="moments-tag">Bebidas sin alcohol </span>
+              <span class="moments-tag">CLASICO CON UN TOQUE TEI </span>
               <h5 class="mb-0">
-               Refrescantes bebidas sin alcohol, sake premium y una experiencia de sushi en vivo — el complemento perfecto para cualquier ocasión.
+               Una selección básica pensada para los amantes del sushi clásico, combina camarones tempura 
+               crujientes, cangrejo fresco y rollos de atún spicy. Ideal para cenas privadas, reuniones en villas o 
+               experiencias relajadas en yate.
               </h5>
             </div>
           </div>
@@ -262,12 +273,14 @@
           <!-- Item 2 -->
           <div class="item">
             <div class="position-re o-hidden">
-              <img src="img/news/2.jpg?=2" class="w-100 d-block" alt="Cumpleaños">
+              <img src="img/MENU-2.jpg" class="w-100 d-block" alt="Cumpleaños">
             </div>
             <div class="moments-card">
-              <span class="moments-tag"> Sake</span>
+              <span class="moments-tag"> FUSIÓN LIGERA</span>
               <h5 class="mb-0">
-                 Descubre la tradición del sake japonés — suave, refinado y perfectamente armonizado con nuestras creaciones de sushi para una experiencia sensorial completa.
+                 Un menú refrescante que une la técnica japonesa con los sabores tropicales. Fusión ligera ofrece 
+                 camarón con yuzu, rollos de mango y tostaditas de atún: una propuesta ideal para elevar cualquier 
+                 evento privado en Los Cabos.
               </h5>
             </div>
           </div>
@@ -275,12 +288,14 @@
           <!-- Item 3 -->
           <div class="item">
             <div class="position-re o-hidden">
-              <img src="img/news/7.jpg?=3" class="w-100 d-block" alt="Aniversarios">
+              <img src="img/MENU-3.jpg" class="w-100 d-block" alt="Aniversarios">
             </div>
             <div class="moments-card">
-              <span class="moments-tag">Chef preparando sushi en vivo</span>
+              <span class="moments-tag">DEGUSTACIÓN PREMIUM</span>
               <h5 class="mb-0">
-                      Lleva el arte de la cocina japonesa a tu evento con nuestro chef de sushi en vivo — auténtico, interactivo y elegantemente presentado para tus invitados.
+                      Una experiencia elevada para los paladares más exigentes que buscan sorprender a sus invitados en 
+                      cualquiera de sus eventos privados en Cabo. Incluye dragon roll, rainbow roll, mix de sashimi y 
+                      yakimeshi de camarón.
               </h5>
             </div>
           </div>

@@ -222,6 +222,14 @@
           <li>• Elegant presentation and attentive service by our professional staff.</li>
           <li>• Personalized menus tailored to your celebration.</li>
         </ul>
+
+        <p class="mt-3 animate-on-scroll" data-anim="fadeInUp" data-delay="100">
+           <p class="mb-0">Additional optional services:</p>
+
+         <li>• Non-alcoholic beverages.</li>
+         <li>• Sake.</li>
+         <li>• Live sushi chef.</li>
+         </p>
       </div>
     </div>
   </div>
@@ -232,8 +240,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-4">
-        <div class="section-subtitle text-uppercase tracking-wide">Additional Optional Services</div>
-        <h2 class="section-title display-5">Bring your memorable moments to life.</h2>
+        <div class="section-subtitle text-uppercase tracking-wide"> CATERING MENUS IN LOS CABOS</div>
+        <h2 class="section-title display-5"> Discover three unique menus that combine authentic Japanese flavors with the spirit of Baja.</h2>
       </div>
     </div>
 
@@ -244,39 +252,41 @@
           <!-- Item 1 -->
           <div class="item">
             <div class="position-re o-hidden">
-              <img src="img/about.jpg?=2" class="w-100 d-block" alt="Non-alcoholic Beverages">
+              <img src="img/MENU-1.jpg" class="w-100 d-block" alt="Non-alcoholic Beverages">
             </div>
             <div class="moments-card">
-              <span class="moments-tag">Non-Alcoholic Beverages</span>
+              <span class="moments-tag"> CLASSIC WITH A TEI TOUCH</span>
               <h5 class="mb-0">
-               Refreshing non-alcoholic drinks, premium sake, and a live sushi experience prepared before your eyes — the perfect complement to any occasion.
-              </h5>
+                A refined selection created for true sushi lovers. This menu combines crispy tempura shrimp, fresh crab, 
+                and spicy tuna rolls — a balance of tradition and flavor. Perfect for private dinners, villa gatherings, or 
+                relaxed yacht experiences in Los Cabos.
             </div>
           </div>
 
           <!-- Item 2 -->
           <div class="item">
             <div class="position-re o-hidden">
-              <img src="img/news/2.jpg?=2" class="w-100 d-block" alt="Sake">
+              <img src="img/MENU-2.jpg" class="w-100 d-block" alt="Sake">
             </div>
             <div class="moments-card">
-              <span class="moments-tag">Sake</span>
+              <span class="moments-tag"> LIGHT FUSION</span>
               <h5 class="mb-0">
-                      Discover the tradition of Japanese sake — smooth, refined, and expertly paired with our signature sushi creations for a complete sensory experience.
-              </h5>
+                      A refreshing menu that blends Japanese technique with tropical flavors. Light Fusion features shrimp 
+                      with yuzu, mango rolls, and tuna tostaditas — an ideal proposal to elevate any private event in Los 
+                     Cabos.
             </div>
           </div>
 
           <!-- Item 3 -->
           <div class="item">
             <div class="position-re o-hidden">
-              <img src="img/news/7.jpg?=3" class="w-100 d-block" alt="Live Sushi Chef">
+              <img src="img/MENU-3.jpg" class="w-100 d-block" alt="Live Sushi Chef">
             </div>
             <div class="moments-card">
-              <span class="moments-tag">Live Sushi Chef</span>
+              <span class="moments-tag">PREMIUM TASTING</span>
               <h5 class="mb-0">
-                 Bring the artistry of Japanese cuisine to your event with a live sushi chef — authentic, interactive, and elegantly presented for your guests.
-              </h5>
+                  An elevated experience for the most discerning palates, designed to impress your guests at any private 
+                  celebration in Cabo. Includes dragon roll, rainbow roll, sashimi mix, and shrimp yakimeshi.
             </div>
           </div>
         </div>
