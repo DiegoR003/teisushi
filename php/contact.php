@@ -3,11 +3,15 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+require_once __DIR__ . '/config.php';
+
 extract($_REQUEST);
 
-// 0 -> PHP
-// 1 -> AJAX
-$tipo_de_procesamiento = 0;
+// 0 -> PHP (form clásico, redirect)
+// 1 -> AJAX (fetch, responde JSON)
+$es_ajax = (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')
+  || (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false);
+$tipo_de_procesamiento = $es_ajax ? 1 : 0;
 
 /* *
 Códigos de error
@@ -45,37 +49,17 @@ if ($enviado) {
 
 function mandarError($codigo_de_error)
 {
-    
-  if ($GLOBALS["tipo_de_procesamiento"] == 0) {
-      
-       //header('location: index.html?err=' .$codigo_de_error);
-     
-    if($codigo_de_error == "0"){
-        header('location: /?msj='. $codigo_de_error);
-        exit;   
+  if ($GLOBALS['tipo_de_procesamiento'] == 1) {
+    header('Content-Type: application/json');
+    if ($codigo_de_error !== '0') {
+      http_response_code(400);
     }
-        if($codigo_de_error == "1"){
-            header('location: /?msj='. $codigo_de_error);
-             exit;
-    exit;   
-    }if($codigo_de_error == "2"){
-        header('location: /?msj='. $codigo_de_error);
-        exit;
-      
-    exit;   
-    }
-     if($codigo_de_error == "3"){
-        header('location: /?msj=' . $codigo_de_error);
-        exit;
-      
-    exit;   
-    }
-  else {
-    echo json_encode(array('error' => $codigo_de_error));
+    echo json_encode(array('success' => $codigo_de_error === '0', 'code' => $codigo_de_error));
     exit;
   }
 
-  }  
+  header('location: /?msj=' . $codigo_de_error);
+  exit;
 }
 
 
@@ -101,7 +85,7 @@ function validarReCaptcha($g_recaptcha)
   curl_setopt(
     $ch,
     CURLOPT_POSTFIELDS,
-    "secret=6Lf92OAfAAAAAGGejKGqc94KGRbvBG1S9clILw2m&response=$g_recaptcha"
+    "secret=" . RECAPTCHA_SECRET . "&response=$g_recaptcha"
   );
 
 

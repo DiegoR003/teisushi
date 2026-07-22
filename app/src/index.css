@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
 
 @theme {
   --font-display: "Libre Caslon Display", serif;

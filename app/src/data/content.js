@@ -107,17 +107,17 @@ export const content = {
       menus: [
         {
           tag: 'CLÁSICO CON UN TOQUE TEI',
-          img: '/img/MENU-1.jpg',
+          img: '/img/menu-1.jpg',
           text: 'Una selección básica pensada para los amantes del sushi clásico, combina camarones tempura crujientes, cangrejo fresco y rollos de atún spicy. Ideal para cenas privadas, reuniones en villas o experiencias relajadas en yate.',
         },
         {
           tag: 'FUSIÓN LIGERA',
-          img: '/img/MENU-2.jpg',
+          img: '/img/menu-2.jpg',
           text: 'Un menú refrescante que une la técnica japonesa con los sabores tropicales. Fusión ligera ofrece camarón con yuzu, rollos de mango y tostaditas de atún: una propuesta ideal para elevar cualquier evento privado en Los Cabos.',
         },
         {
           tag: 'DEGUSTACIÓN PREMIUM',
-          img: '/img/MENU-3.jpg',
+          img: '/img/menu-3.jpg',
           text: 'Una experiencia elevada para los paladares más exigentes que buscan sorprender a sus invitados en cualquiera de sus eventos privados en Cabo. Incluye dragon roll, rainbow roll, mix de sashimi y yakimeshi de camarón.',
         },
       ],
@@ -238,17 +238,17 @@ export const content = {
       menus: [
         {
           tag: 'CLASSIC WITH A TEI TOUCH',
-          img: '/img/MENU-1.jpg',
+          img: '/img/menu-1.jpg',
           text: 'A refined selection created for true sushi lovers. This menu combines crispy tempura shrimp, fresh crab, and spicy tuna rolls — a balance of tradition and flavor. Perfect for private dinners, villa gatherings, or relaxed yacht experiences in Los Cabos.',
         },
         {
           tag: 'LIGHT FUSION',
-          img: '/img/MENU-2.jpg',
+          img: '/img/menu-2.jpg',
           text: 'A refreshing menu that blends Japanese technique with tropical flavors. Light Fusion features shrimp with yuzu, mango rolls, and tuna tostaditas — an ideal proposal to elevate any private event in Los Cabos.',
         },
         {
           tag: 'PREMIUM TASTING',
-          img: '/img/MENU-3.jpg',
+          img: '/img/menu-3.jpg',
           text: 'An elevated experience for the most discerning palates, designed to impress your guests at any private celebration in Cabo. Includes dragon roll, rainbow roll, sashimi mix, and shrimp yakimeshi.',
         },
       ],
