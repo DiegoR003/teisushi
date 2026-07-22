@@ -58,13 +58,6 @@
                  <div class="col-md-12">
                      <div class="footer-bottom-inner">
                          <p class="footer-bottom-copy-right">© Tei Sushi 2023. Diseñado por <a target="_blank" href="https://bananagroup.mx">Banana Group Marketing</a></p>
-                         <p><a href="https://www.rugbyhousepub.com/menus" style="color:#212529;">slot gacor</a></p><br>
-        <p><a href="https://www.greatbeijingmenu.com/menu.html" style="color:#212529;">slot gacor</a></p><br>
-        <p><a href="https://www.blacklabelproductions.net/about/" style="color:#212529;">slot gacor</a></p><br>
-        <p><a href="https://www.qbbqdallas.com/tickets" style="color:#212529;">slot gacor</a></p><br>
-        <p><a href="https://lakemartincreamery.com/blog-post-title/" style="color:#212529;">slot gacor</a></p><br>
-        <p><a href="https://www.pleasantsbbq.com/bbq-on-wheels" style="color:#212529;">slot gacor</a></p><br>
-        <p><a href="https://www.livingcanopies.com/" style="color:#212529;">slot gacor hari ini</a></p><br>
                      </div>
                  </div>
              </div>

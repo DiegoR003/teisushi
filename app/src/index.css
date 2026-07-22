@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap");
+
+@theme {
+  --font-display: "Libre Caslon Display", serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-sans: "Jost", system-ui, sans-serif;
+
+  --color-ink: #0b0b0d;
+  --color-ink-soft: #141317;
+  --color-paper: #f6f3ec;
+  --color-gold: #c6a15b;
+  --color-gold-soft: #e4cfa0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
