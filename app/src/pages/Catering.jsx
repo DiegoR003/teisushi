@@ -57,10 +57,10 @@ export default function Catering() {
         <div className="mx-auto mt-12 grid max-w-6xl gap-8 sm:grid-cols-3">
           {t.menus.map((m, i) => (
             <Reveal as="up" delay={i * 0.1} key={m.tag} className="group overflow-hidden rounded-lg">
-              <div className="relative overflow-hidden">
+              <div className="relative z-0 overflow-hidden">
                 <img src={m.img} alt={m.tag} className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
-              <div className="-mt-8 mx-4 rounded-md bg-[#efe9e3] p-5 text-ink shadow-xl">
+              <div className="relative z-10 -mt-8 mx-4 rounded-md bg-[#efe9e3] p-5 text-ink shadow-xl">
                 <span className="text-xs uppercase tracking-[0.15em] text-[#7a6a58]">{m.tag}</span>
                 <p className="mt-2 text-sm leading-relaxed">{m.text}</p>
               </div>

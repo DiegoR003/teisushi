@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { site } from '../data/content'
 
 const items = [
@@ -7,24 +8,33 @@ const items = [
 ]
 
 export default function SocialFloat() {
+  const [activeIndex, setActiveIndex] = useState(null)
+
   return (
-    <div className="fixed right-0 top-1/3 z-40 flex flex-col gap-2">
-      {items.map(({ href, label, sub, bg, icon: Icon }) => (
-        <a
-          key={label}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          className={`group flex items-center gap-2 rounded-l-md ${bg} text-white pl-2 pr-0 py-2 w-12 hover:w-44 overflow-hidden transition-all duration-300 shadow-lg`}
-        >
-          <Icon className="h-6 w-6 shrink-0" />
-          <span className="whitespace-nowrap text-xs font-semibold leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {label}
-            <br />
-            <small className="font-normal opacity-80">{sub}</small>
-          </span>
-        </a>
-      ))}
+    <div className="fixed right-0 top-1/3 z-40 flex flex-col items-end gap-2" onMouseLeave={() => setActiveIndex(null)}>
+      {items.map(({ href, label, sub, bg, icon: Icon }, i) => {
+        const open = activeIndex === i
+        return (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            onMouseEnter={() => setActiveIndex(i)}
+            onFocus={() => setActiveIndex(i)}
+            className={`flex items-center gap-2 rounded-l-md ${bg} text-white pl-2 pr-0 py-2 overflow-hidden shadow-lg transition-[width] duration-200 ease-out ${open ? 'w-44' : 'w-12'}`}
+          >
+            <Icon className="h-6 w-6 shrink-0" />
+            <span
+              className={`whitespace-nowrap text-xs font-semibold leading-tight transition-opacity duration-150 ${open ? 'opacity-100 delay-100' : 'opacity-0'}`}
+            >
+              {label}
+              <br />
+              <small className="font-normal opacity-80">{sub}</small>
+            </span>
+          </a>
+        )
+      })}
     </div>
   )
 }
