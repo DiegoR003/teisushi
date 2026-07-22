@@ -1,31 +1,50 @@
 import { Suspense, useMemo, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Environment, Float, ContactShadows } from '@react-three/drei'
+import { Float, ContactShadows, useGLTF, useTexture } from '@react-three/drei'
 import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import { Box3, MeshStandardMaterial, SRGBColorSpace, Vector3 } from 'three'
 
-function Chopstick({ position, rotation }) {
-  return (
-    <mesh position={position} rotation={rotation} castShadow>
-      <cylinderGeometry args={[0.025, 0.015, 2.2, 12]} />
-      <meshStandardMaterial color="#3b2a1a" roughness={0.4} metalness={0.1} />
-    </mesh>
-  )
-}
+const MODEL_URL = '/models/sushi-platter/scene.gltf'
+const TEXTURE_URL = '/models/sushi-platter/textures/Sushi_MAT_diffuse.png'
+const TARGET_SIZE = 2.6 // world units across the model's longest side
 
-function Topping({ angle, radius, color, y = 0.62 }) {
-  const x = Math.cos(angle) * radius
-  const z = Math.sin(angle) * radius
-  return (
-    <mesh position={[x, y, z]} castShadow>
-      <sphereGeometry args={[0.16, 16, 16]} />
-      <meshStandardMaterial color={color} roughness={0.35} metalness={0.05} />
-    </mesh>
-  )
-}
-
-function SushiRoll({ scrollYProgress }) {
+function SushiModel({ scrollYProgress }) {
   const group = useRef()
-  const toppingColors = useMemo(() => ['#e2725b', '#f2c14e', '#7a9e5f', '#e2725b', '#f2c14e', '#7a9e5f'], [])
+  const { scene } = useGLTF(MODEL_URL)
+  const diffuseMap = useTexture(TEXTURE_URL)
+
+  // Sketchfab exports come in arbitrary units/pivots — normalize scale
+  // and re-center on load instead of hand-tuning per-model numbers.
+  const normalized = useMemo(() => {
+    diffuseMap.colorSpace = SRGBColorSpace
+    diffuseMap.flipY = false // glTF UVs assume flipY=false; our own TextureLoader defaults to true
+
+    // The source model uses the legacy KHR_materials_pbrSpecularGlossiness
+    // extension, which three's GLTFLoader no longer reads by default —
+    // meshes come through with a blank material. Swap in a plain
+    // metallic-roughness material wired to the same diffuse texture.
+    const material = new MeshStandardMaterial({ map: diffuseMap, roughness: 0.65, metalness: 0.05 })
+
+    const clone = scene.clone(true)
+    clone.traverse((obj) => {
+      if (obj.isMesh) {
+        obj.castShadow = true
+        obj.receiveShadow = true
+        obj.material = material
+      }
+    })
+
+    const box = new Box3().setFromObject(clone)
+    const size = new Vector3()
+    box.getSize(size)
+    const center = new Vector3()
+    box.getCenter(center)
+    const scale = TARGET_SIZE / Math.max(size.x, size.y, size.z)
+
+    clone.scale.setScalar(scale)
+    clone.position.set(-center.x * scale, -box.min.y * scale, -center.z * scale)
+    return clone
+  }, [scene, diffuseMap])
 
   useFrame((state, delta) => {
     if (!group.current) return
@@ -34,7 +53,7 @@ function SushiRoll({ scrollYProgress }) {
 
   useMotionValueEvent(scrollYProgress, 'change', (v) => {
     if (!group.current) return
-    group.current.position.y = -2 - v * 2.2
+    group.current.position.y = -1.7 - v * 2.2
     group.current.rotation.x = v * 0.9
     group.current.rotation.z = v * 0.25
     const s = 1 - v * 0.35
@@ -42,31 +61,15 @@ function SushiRoll({ scrollYProgress }) {
   })
 
   return (
-    <group ref={group} position={[0, -2, 0]}>
-      <Float speed={1.4} rotationIntensity={0.25} floatIntensity={0.5}>
-        {/* nori-wrapped rice cylinder */}
-        <mesh castShadow receiveShadow>
-          <cylinderGeometry args={[0.62, 0.62, 0.8, 48]} />
-          <meshStandardMaterial color="#1a1a1a" roughness={0.55} metalness={0.05} />
-        </mesh>
-        <mesh position={[0, 0.001, 0]}>
-          <cylinderGeometry args={[0.5, 0.5, 0.82, 48]} />
-          <meshStandardMaterial color="#f4ead1" roughness={0.9} />
-        </mesh>
-        {[...Array(6)].map((_, i) => (
-          <Topping key={i} angle={(i / 6) * Math.PI * 2} radius={0.36} y={0.44} color={toppingColors[i]} />
-        ))}
-        {/* plate */}
-        <mesh position={[0, -0.49, 0]} receiveShadow>
-          <cylinderGeometry args={[1.35, 1.5, 0.1, 64]} />
-          <meshStandardMaterial color="#efe9e3" roughness={0.3} metalness={0.1} />
-        </mesh>
+    <group ref={group} position={[0, -1.7, 0]}>
+      <Float speed={1.4} rotationIntensity={0.2} floatIntensity={0.4}>
+        <primitive object={normalized} />
       </Float>
-      <Chopstick position={[1.15, -0.38, 0.55]} rotation={[0, 0.55, Math.PI / 2.1]} />
-      <Chopstick position={[1.32, -0.38, 0.28]} rotation={[0, 0.55, Math.PI / 2.1]} />
     </group>
   )
 }
+
+useGLTF.preload(MODEL_URL)
 
 export default function HeroScene({ scrollTarget }) {
   const { scrollYProgress } = useScroll({
@@ -84,12 +87,12 @@ export default function HeroScene({ scrollTarget }) {
       className="!absolute inset-0"
     >
       <Suspense fallback={null}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[4, 6, 4]} intensity={1.4} castShadow shadow-mapSize={[1024, 1024]} />
-        <pointLight position={[-4, 2, -3]} intensity={0.6} color="#c6a15b" />
-        <SushiRoll scrollYProgress={scrollYProgress} />
-        <ContactShadows position={[0, -2.5, 0]} opacity={0.5} scale={4.5} blur={2.4} far={2} />
-        <Environment preset="city" />
+        <ambientLight intensity={0.7} />
+        <directionalLight position={[4, 6, 4]} intensity={1.8} castShadow shadow-mapSize={[1024, 1024]} />
+        <directionalLight position={[-3, 2, -4]} intensity={0.5} color="#c6a15b" />
+        <pointLight position={[-4, 2, -3]} intensity={0.4} color="#c6a15b" />
+        <SushiModel scrollYProgress={scrollYProgress} />
+        <ContactShadows position={[0, -2.2, 0]} opacity={0.5} scale={4.5} blur={2.4} far={2} />
         <CameraRig cameraZ={cameraZ} />
       </Suspense>
     </Canvas>
@@ -99,7 +102,7 @@ export default function HeroScene({ scrollTarget }) {
 function CameraRig({ cameraZ }) {
   useFrame((state) => {
     state.camera.position.z = cameraZ.get()
-    state.camera.lookAt(0, -1.6, 0)
+    state.camera.lookAt(0, -1.3, 0)
   })
   return null
 }

@@ -18,6 +18,17 @@ export default function Footer() {
           {site.phone}
         </a>
       </p>
+      <p className="mt-4 text-xs text-paper/35">
+        3D model "Small Sushi Platter" by{' '}
+        <a href="https://sketchfab.com/EunbyH" target="_blank" rel="noreferrer" className="hover:text-gold/70">
+          EunbyH
+        </a>
+        , licensed{' '}
+        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer" className="hover:text-gold/70">
+          CC-BY-4.0
+        </a>
+        .
+      </p>
     </footer>
   )
 }

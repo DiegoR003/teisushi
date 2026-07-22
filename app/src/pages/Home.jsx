@@ -1,10 +1,13 @@
-import { useRef } from 'react'
+import { lazy, Suspense, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../context/LangContext'
 import { content, site } from '../data/content'
-import HeroScene from '../scenes/HeroScene'
 import Reveal from '../components/Reveal'
 import ContactForm from '../components/ContactForm'
+
+// three.js + react-three-fiber son ~1MB minificados — se separan del bundle
+// principal para no retrasar el primer render del resto de la página.
+const HeroScene = lazy(() => import('../scenes/HeroScene'))
 
 export default function Home() {
   const { lang } = useLang()
@@ -16,7 +19,9 @@ export default function Home() {
       {/* HERO — 3D scene + scroll-driven motion */}
       <section ref={heroRef} className="relative h-[160svh]">
         <div className="sticky top-0 h-svh overflow-hidden">
-          <HeroScene scrollTarget={heroRef} />
+          <Suspense fallback={null}>
+            <HeroScene scrollTarget={heroRef} />
+          </Suspense>
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/10 to-ink" />
           <div className="relative z-10 flex h-full flex-col items-center px-6 pt-[14svh] text-center">
             <motion.p

@@ -23,13 +23,14 @@ export default function ContactForm({ variant = 'default' }) {
 
     setStatus('sending')
     const formData = new FormData(form)
-    formData.set('g-recaptcha-response', captchaToken)
+    const payload = Object.fromEntries(formData.entries())
+    payload.recaptchaToken = captchaToken
 
     try {
-      const res = await fetch('/php/contact.php', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'X-Requested-With': 'XMLHttpRequest' },
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       })
       const data = await res.json().catch(() => null)
       if (res.ok && data?.success) {
