@@ -7,7 +7,6 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-ink py-8 text-center text-sm text-paper/60">
-      <p>{t.rights} </p>
       <p className="mt-2">
         <a href={site.phoneHref} className="hover:text-gold transition-colors">
           {site.phone}
