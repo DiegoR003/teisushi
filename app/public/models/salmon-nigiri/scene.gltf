@@ -1,0 +1,473 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 721,
+      "max": [
+        0.7999789714813232,
+        0.38127198815345764,
+        0.19159799814224243
+      ],
+      "min": [
+        -0.7999780178070068,
+        -0.38127100467681885,
+        -0.023725999519228935
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 8652,
+      "componentType": 5126,
+      "count": 721,
+      "max": [
+        0.9575852751731873,
+        0.9723537564277649,
+        1.0
+      ],
+      "min": [
+        -0.9575852751731873,
+        -0.9723537564277649,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 721,
+      "max": [
+        1.0,
+        1.0,
+        0.8524676561355591,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.8524676561355591,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 721,
+      "max": [
+        0.9947370290756226,
+        0.9960939884185791
+      ],
+      "min": [
+        0.0039059999398887157,
+        0.0039059999398887157
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 3486,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 17304,
+      "componentType": 5126,
+      "count": 16660,
+      "max": [
+        0.785597026348114,
+        0.3525499999523163,
+        0.0774879977107048
+      ],
+      "min": [
+        -0.7386379837989807,
+        -0.3777410089969635,
+        0.031254999339580536
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 217224,
+      "componentType": 5126,
+      "count": 16660,
+      "max": [
+        0.9979354739189148,
+        0.9998096823692322,
+        1.0
+      ],
+      "min": [
+        -0.9996498227119446,
+        -0.9997672438621521,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 11536,
+      "componentType": 5126,
+      "count": 16660,
+      "max": [
+        0.999768853187561,
+        0.9998667240142822,
+        0.999422013759613,
+        1.0
+      ],
+      "min": [
+        -0.9993190169334412,
+        -0.9992469549179077,
+        -0.9999039769172668,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5768,
+      "componentType": 5126,
+      "count": 16660,
+      "max": [
+        0.9932489991188049,
+        0.2624169886112213
+      ],
+      "min": [
+        0.474914014339447,
+        0.0052709998562932014
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 13944,
+      "componentType": 5125,
+      "count": 80352,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 417144,
+      "componentType": 5126,
+      "count": 7974,
+      "max": [
+        0.5881699919700623,
+        0.28887200355529785,
+        0.27641400694847107
+      ],
+      "min": [
+        -0.7604039907455444,
+        -0.2910430133342743,
+        0.031171999871730804
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 512832,
+      "componentType": 5126,
+      "count": 7974,
+      "max": [
+        0.9999994039535522,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999994039535522,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 278096,
+      "componentType": 5126,
+      "count": 7974,
+      "max": [
+        0.9994897842407227,
+        0.9998410940170288,
+        0.9993316531181335,
+        1.0
+      ],
+      "min": [
+        -0.9992508888244629,
+        -0.9993764758110046,
+        -0.9998264908790588,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 139048,
+      "componentType": 5126,
+      "count": 7974,
+      "max": [
+        0.9969429969787598,
+        0.9973359704017639
+      ],
+      "min": [
+        0.007865999825298786,
+        0.000999000039882958
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 335352,
+      "componentType": 5125,
+      "count": 39060,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "chenkl (https://sketchfab.com/chenkl)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/stylized-salmon-nigiri-sushi-pbr-learning-2fb933a56822411f982e259e3b04671c",
+      "title": "Stylized Salmon Nigiri Sushi PBR Learning"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 491592,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 202840,
+      "byteOffset": 491592,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 608520,
+      "byteOffset": 694432,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 405680,
+      "byteOffset": 1302952,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1708632,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Salmon_Sushi_Packs_Export_baseColor.png"
+    },
+    {
+      "uri": "textures/Salmon_Sushi_Packs_Export_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Salmon_Sushi_Packs_Export_normal.png"
+    },
+    {
+      "uri": "textures/Wooden_Board_Sushi_Sause_Export_baseColor.png"
+    },
+    {
+      "uri": "textures/Wooden_Board_Sushi_Sause_Export_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Wooden_Board_Sushi_Sause_Export_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Salmon_Sushi_Packs_Export",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        },
+        "roughnessFactor": 0.8773136606306777
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Wooden_Board_Sushi_Sause_Export",
+      "normalTexture": {
+        "index": 5
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.10918716341257095,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.424442056282915e-17,
+        -0.10918716341257095,
+        0.0,
+        0.0,
+        0.10918716341257095,
+        2.424442056282915e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3,
+        4
+      ],
+      "name": "Stylized_Salmon_Nigiri_Sushi_to_Sketchfab.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    },
+    {
+      "mesh": 2,
+      "name": "Object_4"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}

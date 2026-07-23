@@ -1,36 +1,24 @@
 import { Suspense, useMemo, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Float, ContactShadows, useGLTF, useTexture } from '@react-three/drei'
+import { Float, ContactShadows, useGLTF } from '@react-three/drei'
 import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
-import { Box3, MeshStandardMaterial, SRGBColorSpace, Vector3 } from 'three'
+import { Box3, Vector3 } from 'three'
 
-const MODEL_URL = '/models/sushi-platter/scene.gltf'
-const TEXTURE_URL = '/models/sushi-platter/textures/Sushi_MAT_diffuse.png'
+const MODEL_URL = '/models/salmon-nigiri/scene.gltf'
 const TARGET_SIZE = 2.6 // world units across the model's longest side
 
 function SushiModel({ scrollYProgress }) {
   const group = useRef()
   const { scene } = useGLTF(MODEL_URL)
-  const diffuseMap = useTexture(TEXTURE_URL)
 
   // Sketchfab exports come in arbitrary units/pivots — normalize scale
   // and re-center on load instead of hand-tuning per-model numbers.
   const normalized = useMemo(() => {
-    diffuseMap.colorSpace = SRGBColorSpace
-    diffuseMap.flipY = false // glTF UVs assume flipY=false; our own TextureLoader defaults to true
-
-    // The source model uses the legacy KHR_materials_pbrSpecularGlossiness
-    // extension, which three's GLTFLoader no longer reads by default —
-    // meshes come through with a blank material. Swap in a plain
-    // metallic-roughness material wired to the same diffuse texture.
-    const material = new MeshStandardMaterial({ map: diffuseMap, roughness: 0.65, metalness: 0.05 })
-
     const clone = scene.clone(true)
     clone.traverse((obj) => {
       if (obj.isMesh) {
         obj.castShadow = true
         obj.receiveShadow = true
-        obj.material = material
       }
     })
 
@@ -44,7 +32,7 @@ function SushiModel({ scrollYProgress }) {
     clone.scale.setScalar(scale)
     clone.position.set(-center.x * scale, -box.min.y * scale, -center.z * scale)
     return clone
-  }, [scene, diffuseMap])
+  }, [scene])
 
   useFrame((state, delta) => {
     if (!group.current) return
